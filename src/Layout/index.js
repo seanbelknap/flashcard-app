@@ -1,29 +1,29 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState } from "react";
 import Header from "./Header";
 import NotFound from "./NotFound";
 import Home from "./Home";
-import Study from "./Study";
+import Study from "./Study/Study";
 import Deck from "./Deck";
 import CreateDeck from "./CreateDeck";
 import EditDeck from "./EditDeck";
 import AddCard from "./AddCard";
 import EditCard from "./EditCard";
 import { Route, Switch } from "react-router-dom";
-import {listDecks} from '../utils/api/index'
+import { listDecks } from "../utils/api/index";
 
 
 function Layout() {
 
-  useEffect(() => {
+  const [decks, setDecks] = useState([]);
 
-    async function getAllDecks(){
+ useEffect(() => {
+    async function getAllDecks() {
       const abortController = new AbortController();
-      const decks = await listDecks (abortController.signal);
-      console.log(decks)
+      const decks = await listDecks(abortController.signal);
+      setDecks(decks);
     }
-    getAllDecks()
-  },[])
-    
+      getAllDecks();
+  },[]);
   
 
   return (
@@ -31,8 +31,8 @@ function Layout() {
       <Header />
       <div className="container">
         <Switch>
-          <Route exact path={'/'}>
-            <Home />
+          <Route exact={true} path={'/'}>
+            <Home decks={decks} />
           </Route>
           <Route path={'/decks/new'}>
             <CreateDeck />
