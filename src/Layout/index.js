@@ -3,11 +3,11 @@ import Header from "./Header";
 import NotFound from "./NotFound";
 import Home from "./Home";
 import Study from "./Study/Study";
-import Deck from "./Deck";
-import CreateDeck from "./CreateDeck";
-import EditDeck from "./EditDeck";
-import AddCard from "./AddCard";
-import EditCard from "./EditCard";
+import Deck from "./Deck/Deck";
+import CreateDeck from "./Deck/CreateDeck";
+import EditDeck from "./Deck/EditDeck";
+import AddCard from "./Cards/AddCard";
+import EditCard from "./Cards/EditCard";
 import { Route, Switch } from "react-router-dom";
 import { listDecks } from "../utils/api/index";
 
@@ -25,7 +25,6 @@ function Layout() {
       getAllDecks();
   },[]);
   
-
   return (
     <>
       <Header />

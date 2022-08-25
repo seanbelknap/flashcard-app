@@ -48,6 +48,38 @@
       "back": "b",
       "deckId": 1,
       "id": 7
+    },
+    {
+      "deckId": null,
+      "id": 8
+    },
+    {
+      "deckId": null,
+      "id": 9
+    },
+    {
+      "deckId": null,
+      "id": 10
+    },
+    {
+      "deckId": null,
+      "id": 11
+    },
+    {
+      "deckId": null,
+      "id": 12
+    },
+    {
+      "front": "new card edited",
+      "back": "new card edited",
+      "deckId": 1,
+      "id": 13
+    },
+    {
+      "front": "new new",
+      "back": "new new",
+      "deckId": 1,
+      "id": 14
     }
   ]
 }

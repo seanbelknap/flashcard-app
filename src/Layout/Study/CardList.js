@@ -7,7 +7,6 @@ function CardList({ cards }) {
   const { deckId } = useParams();
   const history = useHistory();
   //const cards = decks.cards
-    console.log(cards)
   // User flips card
   const flipHandler = () => {
     setSide(!side);
